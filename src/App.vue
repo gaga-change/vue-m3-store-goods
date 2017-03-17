@@ -9,3 +9,6 @@ export default {
   name: 'app'
 }
 </script>
+<style>
+  @import "/css/fost-base.css";
+</style>
