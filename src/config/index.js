@@ -5,8 +5,8 @@
 
 const CONSTANTS = {
   API: '/api/'
+  // API: './',
 };
-
 CONSTANTS.APIGoods = CONSTANTS.API + 'mobile-goods-service/rs/'; // 商品接口
 CONSTANTS.APICategory = CONSTANTS.API + 'mobile-category-service/rs/'; // 游戏接口
 CONSTANTS.APILogin = CONSTANTS.API + 'mobile-user-service/rs/'; // 登录接口
@@ -44,4 +44,4 @@ CONFIG.install = function (Vue, options) {
   Vue.prototype.$CONSTANTS = CONSTANTS;
 };
 
-export default CONFIG;
+export default {};
