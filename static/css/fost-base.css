@@ -61,8 +61,7 @@ textarea{overflow: auto; vertical-align: top; resize: vertical; -webkit-appearan
 optgroup{font-weight: bold;}
 /* Tables ========================================================================== */
 table{border-collapse: collapse; border-spacing: 0;}
-td,th{padding
-: 0;}
+td,th{padding: 0;}
 body,input,textarea,select,button{text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -moz-font-feature-settings: "liga", "kern";}
 /*Only phones */
 @media only screen and (max-width: 640px){body{word-wrap: break-word; -webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}}
@@ -244,8 +243,8 @@ input::-ms-input-placeholder, textarea:-ms-input-placeholder { color: #c7c4c4;  
 .color-m1{color:#f75e46;}
 .color-m2{ color:#1b5bff;}
 
-.bg-fff{ background-color:#fff; }
-.bg-666{ background-color:#666; }
+.bg-fff{ background-color:#fff; } 
+.bg-666{ background-color:#666; } 
 .bg-f1{ background-color:#f1f1f1; }
 .bg-f8{ background-color:#f8f8f8; }
 .bg-m1{ background-color:#f75e46;}
@@ -306,7 +305,7 @@ input::-ms-input-placeholder, textarea:-ms-input-placeholder { color: #c7c4c4;  
 .tab .tab-body .active{display:block;}
 
 /*我是买家卖家内容为空*/
-.list-empty{float:left;  width:100%; text-align:center; background:#f1f1f1; }
+.list-empty{ width:100%; text-align:center; background:#f1f1f1; }
 .list-empty p { display:block; padding:1.3rem 0 0 0 ; }
 .list-empty p img{ width:1.72rem; }
 .list-empty p.pstore img{ width:1.23rem; }
@@ -314,7 +313,7 @@ input::-ms-input-placeholder, textarea:-ms-input-placeholder { color: #c7c4c4;  
 .list-empty span.s02{ display:block; padding:.3rem .48rem;  padding-bottom:0; }
 .list-empty div.topc{ margin:0 auto; margin-top:.45rem; width:4.34rem; height:.92rem; line-height:.92rem; background:#f75e46; font-size:.32rem; text-align:center;  }
 .list-empty div.topc a{ color:#fff; width:4.34rem;  line-height:.92rem; display:block; }
-.list-empty2{float:left;  width:100%; text-align:center; background:#f1f1f1; }
+.list-empty2{ width:100%; text-align:center; background:#f1f1f1; }
 .list-empty2 p { display:block; padding:1.3rem 0 0 0 ; }
 .list-empty2 p img{ width:1rem; }
 .list-empty2 span{ display:block; padding-top:.25rem; font-size:.32rem; color:#666; }
@@ -323,7 +322,7 @@ input::-ms-input-placeholder, textarea:-ms-input-placeholder { color: #c7c4c4;  
 .kf2{bottom:40%; width:.98rem; height:1.16rem;  max-width:768px; text-align:right; position:fixed;right:0}
 .kf2 img{ float:right; width:.96rem; }
 
-/*页面路由效果*/
+/*页面路由效果*/ 
 .ConBox {width: 100%;height: 100%; max-width:768px;position: absolute;top: 0;left: 150%;right: 0;margin: 0 -3.84rem;z-index: 2001;overflow-y: scroll; overflow-x:hidden;-webkit-transform-origin: 0px 0px;-webkit-transform: scale(1, 1);opacity: 1;background: #fff; }
 .Jbox {width: 100%;background: white;}
 .Jbox a {width: 100%;float:left;border-bottom: 1px solid #e8e8e8;text-align:center; height:1rem; line-height:1rem; position: relative; font-size:.3rem;}
@@ -352,7 +351,7 @@ input::-ms-input-placeholder, textarea:-ms-input-placeholder { color: #c7c4c4;  
 .footer .badge:empty{display:none}
 .footer .active .badge{display:none}
 
-/* === Preloader === */
+/* === Preloader === */	
 .preloader-indicator-overlay {
   visibility: visible;
   background: #000;
