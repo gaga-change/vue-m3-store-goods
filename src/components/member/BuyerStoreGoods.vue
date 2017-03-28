@@ -75,6 +75,9 @@
 </template>
 
 <script>
+  import http from './http'
+//  console.log(http)
+  http.getStoreGoods();
   export  default{
     data(){
       return {
