@@ -9,7 +9,7 @@
 function loginBySMS(params) {
     return new Promise((resolve) => {
         this._http.jsonp(
-            '/login/mobile-user-service/rs/account/login/loginbyverifycode',
+            '/api/mobile-user-service/rs/account/login/loginbyverifycode',
             {
                 params: params,
                 headers: {

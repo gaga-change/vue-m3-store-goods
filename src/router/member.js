@@ -29,12 +29,15 @@ export const member = {
           name: 'StoreGoods',
           component: BuyerStoreGoods
         }
-      ]
+      ],
+      meta: {isPublish: true, requireAuth: true}
     },
     {
       path: 'goods-detail',
       name: 'GoodsDetail',
       component: GoodsDetail,
+      meta: {isPublish: true, requireAuth: true}
     }
-  ]
+  ],
+  meta: {isPublish: true, requireAuth: true} //暂时没登入不能进入
 };

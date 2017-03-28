@@ -8,9 +8,10 @@ import {getAccount} from './getAccount'
 
 const CONFIG = {};
 CONFIG.install = function (Vue, options) {
-    Vue.CONSTANTS = CONSTANTS;
-    Vue.prototype.$CONSTANTS = CONSTANTS;
-    Vue.prototype.$getAccount= getAccount;
+  Vue.CONSTANTS = CONSTANTS;
+  Vue.getAccount = getAccount;
+  Vue.prototype.$CONSTANTS = CONSTANTS;
+  Vue.prototype.$getAccount = getAccount;
 };
 
 export {CONFIG};

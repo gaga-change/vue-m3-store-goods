@@ -9,7 +9,7 @@
 function loginOut() {
     return new Promise((resolve) => {
         this._http.post(
-            '/login/mobile-user-service/rs/account/logout',
+            '/api/mobile-user-service/rs/account/logout',
             {},
             {
                 headers: {

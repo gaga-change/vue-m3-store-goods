@@ -1,10 +1,10 @@
 /**
  * Created by 严俊东 on 2017/3/23.
  */
-
+import Vue from 'vue'
 function getAccount() {
-  return this.$http.post(
-    this.$CONSTANTS.APILogin + 'account/queryCurrentUserInfo',
+  return Vue.http.post(
+    Vue.CONSTANTS.APILogin + 'account/queryCurrentUserInfo',
     {},
     {
       headers: {

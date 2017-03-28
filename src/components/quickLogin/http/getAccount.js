@@ -8,7 +8,7 @@
 function getAccount() {
     return new Promise((resolve,reject) => {
         this._http.post(
-            '/login/mobile-user-service/rs/account/queryCurrentUserInfo',
+            '/api/mobile-user-service/rs/account/queryCurrentUserInfo',
             {},
             {
                 headers: {

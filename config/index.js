@@ -38,11 +38,11 @@ module.exports = {
         changeOrigin: true,
         pathRewrite: {'^/login/api': '/api'}
       },
-      "/login/mobile-user-service": {
+      "/api/mobile-user-service": {
         target: "http://mn.5173.cn/",
         changeOrigin: true,
-        pathRewrite: {'^/login/mobile-user-service': '/mobile-user-service'}
-      },
+        pathRewrite: {'^/api/mobile-user-service': '/mobile-user-service'}
+      }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
