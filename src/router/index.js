@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Help from '@/components/Help'
 
 import {member} from './member'
+import {quickLogin} from './quickLogin'
 
 Vue.use(Router);
 
@@ -13,6 +14,7 @@ export default new Router({
       name: 'Help',
       component: Help,
     },
-    member
+    member,
+    quickLogin
   ]
 })

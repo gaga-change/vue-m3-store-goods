@@ -5,6 +5,9 @@
       <li>
         <router-link :to="{name: 'StoreGoods'}">转入商城中的商品</router-link>
       </li>
+      <li>
+        <router-link :to="{name: 'QuickLogin'}">进入登入页面</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -21,6 +24,7 @@
 </script>
 
 <style scoped>
+  @import "~css/fost-base.css";
   h1 {
     text-align: center;
     margin-top: 2em;

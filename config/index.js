@@ -27,7 +27,23 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: '',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      "/login/api/mobile-category-service": {
+        target: "http://mn.5173.cn/",
+        changeOrigin: true,
+        pathRewrite: {'^/login/api/mobile-category-service': '/mobile-category-service'}
+      },
+      "/login/api/mobile-sms-service": {
+        target: "http://mn.5173.cn/",
+        changeOrigin: true,
+        pathRewrite: {'^/login/api': '/api'}
+      },
+      "/login/mobile-user-service": {
+        target: "http://mn.5173.cn/",
+        changeOrigin: true,
+        pathRewrite: {'^/login/mobile-user-service': '/mobile-user-service'}
+      },
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
