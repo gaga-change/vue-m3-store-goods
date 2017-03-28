@@ -5,5 +5,5 @@
 import getStoreGoods from './getStoreGoods'
 
 export default {
-    getStoreGoods
+  getStoreGoods
 }
