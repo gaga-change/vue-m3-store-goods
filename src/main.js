@@ -4,10 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
+import MintUI from 'mint-ui'
 
 import {CONFIG} from './config'
 Vue.use(CONFIG)
 Vue.use(VueResource)
+Vue.use(MintUI)
 
 Vue.config.productionTip = false;
 

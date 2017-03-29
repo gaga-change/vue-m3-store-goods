@@ -14,7 +14,7 @@
     </div>
     <!---------------------------- tab3 ---------------------------->
     <div class="mt-100 bg-fff clearfix tab3">
-      <ul class="clearfix">
+      <ul class="clearfix ">
         <li class="fl text-center">
           <a class="f32 color-000" href="javascript:void(0);">手机端的商品</a>
         </li>
@@ -29,8 +29,6 @@
     <router-view></router-view>
   </div>
 </template>
-
 <script>
   export default{}
 </script>
-
