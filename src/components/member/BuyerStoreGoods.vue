@@ -4,7 +4,7 @@
     <div class="mt-20 bg-f5 tab4 clearfix" style="position: absolute; width: 100%;z-index: 1">
       <ul>
         <li v-for="(value, key) in menus" class="fl text-center"
-            :class="{'on': key == menus.checked }"
+            :class="{on: key == menus.checked }"
         >
           <a
             class="f30 color-000" href="javascript:void(0);"
@@ -55,9 +55,9 @@
           没有数据没有数据没有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没有数据没有数据
-      </div>
+       
+        </div>
       </singleList>
-
     </div>
   </div>
 </template>

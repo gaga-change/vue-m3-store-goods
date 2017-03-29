@@ -17,9 +17,10 @@
         <p v-show="loading && init && !allLoading" class="page-infinite-loading">
           <mt-spinner type="fading-circle"></mt-spinner>
           加载中...
+
         </p>
         <div slot="top" class="mint-loadmore-top">
-          <span v-show="topStatus !== 'loading'" :class="{ 'rotate': topStatus === 'drop' }"
+          <span v-show="topStatus !== 'loading'" :class="{ rotate: topStatus === 'drop' }"
                 style="font-size: .2rem">↓</span>
           <span v-show="topStatus === 'loading'">
                     <span v-if="msgShow">更新成功</span>
@@ -153,6 +154,7 @@
   .rotate {
     transform: rotate(180deg);
   }
+
   .mint-loadmore {
     overflow: visible;
   }
