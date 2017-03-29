@@ -55,7 +55,7 @@
           没有数据没有数据没有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没有数据没有数据
-       
+
         </div>
       </singleList>
     </div>
@@ -69,8 +69,7 @@
   Vue.component('singleList', singleList);
 
   import http from './http'
-  //  console.log(http)
-  http.getStoreGoods();
+  http.getBuyerStoreOrderList("1", 1, 10);
   export  default{
     data(){
       return {

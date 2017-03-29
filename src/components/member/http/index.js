@@ -4,10 +4,15 @@
 
 import Vue from 'vue'
 import {getStoreGoods} from './getStoreGoods'
+import {getBuyerStoreOrderList} from './getBuyerStoreOrderList'
 
 export default {
   vm: new Vue(),
   getStoreGoods,
+  getBuyerStoreOrderList,
+  test(){
+    console.log(this.vm);
+  },
   getTop(firstValue) {
     return new Promise((resolve) => {
       setTimeout(() => {

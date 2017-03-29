@@ -55,7 +55,6 @@
         init: false, // 是否被初始化，确保 firstLoadMore 只执行一次。
         allLoading: false, // 是否数据接收完毕
         wrapperHeight: 0,
-        isTopRun: false,
       }
     },
     watch: {
@@ -86,7 +85,6 @@
     },
     mounted(){
       this.wrapperHeight = document.documentElement.clientHeight - this.$refs.wrapper.getBoundingClientRect().top;
-//      this.translate = this.$refs.loadmore.translate
 
     },
     methods: {
@@ -104,7 +102,6 @@
        */
       topStatusChange(status){
         // 下拉和释放状态，主要用于控制下拉的样式效果
-        console.log(status);
         this.topStatus = status;
       },
       /**
