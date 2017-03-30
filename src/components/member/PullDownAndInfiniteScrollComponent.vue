@@ -1,6 +1,7 @@
 <template>
   <div>
     <div ref="wrapper" :style="{ height: wrapperHeight + 'px' }">
+      {{loadmoreDom ? loadmoreDom.clientHeight : 0}}
       <mt-loadmore
         ref="loadmore"
         :autoFill=false
@@ -9,15 +10,14 @@
         v-infinite-scroll="loadMore"
         infinite-scroll-disabled="loading"
         infinite-scroll-immediate-check="test"
-        infinite-scroll-distance="100"
-        :style="{ height: wrapperHeight + 'px' }"
+        infinite-scroll-distance="10"
       >
         <slot></slot>
+        <div :style="{ height: wrapperHeight - (loadmoreDom ? loadmoreDom.clientHeight : 0)  + 'px', backgroundColor: 'red'}"></div>
         <slot name="noDataShow" v-if="noDataShow"></slot>
         <p v-show="loading && init && !allLoading" class="page-infinite-loading">
           <mt-spinner type="fading-circle"></mt-spinner>
           加载中...
-
         </p>
         <div slot="top" class="mint-loadmore-top">
           <span v-show="topStatus !== 'loading'" :class="{ rotate: topStatus === 'drop' }"
@@ -55,6 +55,7 @@
         init: false, // 是否被初始化，确保 firstLoadMore 只执行一次。
         allLoading: false, // 是否数据接收完毕
         wrapperHeight: 0,
+        loadmoreDom: null
       }
     },
     watch: {
@@ -85,7 +86,7 @@
     },
     mounted(){
       this.wrapperHeight = document.documentElement.clientHeight - this.$refs.wrapper.getBoundingClientRect().top;
-
+      this.loadmoreDom = this.$refs.loadmore.$el;
     },
     methods: {
       /**

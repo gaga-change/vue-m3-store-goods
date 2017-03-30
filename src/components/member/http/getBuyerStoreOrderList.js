@@ -7,7 +7,7 @@
  * @returns {Promise.<TResult>}
  */
 function getBuyerStoreOrderList(orderState, start, pageSize) {
-
+return
   this.vm.$http.get('/api/mobile-goods-service/rs/purchaseData/myBuyOrderList',
     {
       params: {

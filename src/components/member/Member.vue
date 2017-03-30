@@ -1,12 +1,19 @@
 <template>
-  <div>
+  <div id="member-app">
+    <vue-go-top></vue-go-top>
+
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+  import GoTop from '../common/SortList_GoTop.vue'
+
   export default {
-    name: 'member'
+    name: 'member',
+    components: {
+      'vue-go-top': GoTop
+    },
   }
 </script>
 

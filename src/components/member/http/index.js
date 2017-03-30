@@ -25,12 +25,13 @@ export default {
         } else {
           resolve([])
         }
-      }, 1000)
+      }, 10)
     });
   },
   loadMore(lastValue){
     return new Promise((resolve) => {
       setTimeout(() => {
+        console.log("执行一次")
         if (lastValue < 60) {
           let ret = [];
           for (let i = 1; i < 3; i++) {
@@ -40,7 +41,7 @@ export default {
         } else {
           resolve([]);
         }
-      }, 1000)
+      }, 10)
     })
   }
 }

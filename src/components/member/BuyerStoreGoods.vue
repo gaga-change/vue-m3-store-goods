@@ -56,6 +56,8 @@
           有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没有数据没有数据
 
+
+
         </div>
       </singleList>
     </div>
@@ -66,32 +68,15 @@
 
   import Vue from 'vue'
   import singleList from './PullDownAndInfiniteScrollComponent.vue'
+  import {buyerStoreMenu} from './data/buyerStoreMenu.js'
   Vue.component('singleList', singleList);
-
+  console.log(buyerStoreMenu)
   import http from './http'
   http.getBuyerStoreOrderList("1", 1, 10);
   export  default{
     data(){
       return {
-        menus: {
-          paying: {
-            name: '待付款',
-            list: []
-          },
-          payed: {
-            name: '已付款',
-            list: []
-          },
-          buySuccess: {
-            name: '交易成功',
-            list: []
-          },
-          buyCancel: {
-            name: '交易取消',
-            list: []
-          },
-          checked: "paying"
-        },
+        menus: buyerStoreMenu,
         list: null,
         startSingleList: false // 启动列表显示的指令
       }
@@ -116,7 +101,6 @@
           let last = this.list[this.list.length - 1] || 0;
           http.loadMore(last).then((res) => {
             if (res.length == 0) {
-
               resolve("加载完毕")
             } else {
               this.list.push(...res);
