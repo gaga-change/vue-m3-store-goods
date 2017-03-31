@@ -25,7 +25,7 @@ export default {
         } else {
           resolve([])
         }
-      }, 10)
+      }, 1000)
     });
   },
   loadMore(lastValue){
@@ -41,7 +41,7 @@ export default {
         } else {
           resolve([]);
         }
-      }, 10)
+      }, 1000)
     })
   }
 }

@@ -17,7 +17,7 @@ const GoodsDetail = r => require.ensure([], () =>
 
 
 export const member = {
-  path: '/member',
+  path: '/vue/member',
   component: Member,
   children: [
     {

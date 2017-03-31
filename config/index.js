@@ -48,6 +48,26 @@ module.exports = {
         target: "http://192.168.40.130:8086/",
         changeOrigin: true,
         pathRewrite: {'^/api/mobile-goods-service': '/mobile-goods-service'}
+      },
+      ["**/*.html"]: {
+        target: "http://localhost:3000/",
+        changeOrigin: true,
+      },
+      ["/js"]: {
+        target: "http://localhost:3000/",
+        changeOrigin: true,
+      },
+      ["/css"]: {
+        target: "http://localhost:3000/",
+        changeOrigin: true,
+      },
+      ["/images"]: {
+        target: "http://localhost:3000/",
+        changeOrigin: true,
+      },
+      "/api": {
+        target: "http://myxb.5173.com:93/",
+        changeOrigin: true,
       }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"

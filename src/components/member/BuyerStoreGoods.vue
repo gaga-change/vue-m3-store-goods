@@ -17,6 +17,7 @@
     <div style="height: 1.3rem"></div>
     <!---------------------------- 商品 ---------------------------->
     <div id="tab-content">
+
       <singleList
         :start="startSingleList"
         :dataArr="list"
@@ -55,9 +56,6 @@
           没有数据没有数据没有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没有数据没有数据
-
-
-
         </div>
       </singleList>
     </div>
