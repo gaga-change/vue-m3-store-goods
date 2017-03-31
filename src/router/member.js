@@ -25,7 +25,7 @@ export const member = {
       component: MemberBuyer,
       children: [
         {
-          path: '',
+          path: 'store/:state',
           name: 'StoreGoods',
           component: BuyerStoreGoods
         }

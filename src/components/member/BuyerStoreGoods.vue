@@ -1,16 +1,18 @@
 <template>
   <div>
+    {{checked}}
     <!---------------------------- tab4 ---------------------------->
     <div class="mt-20 bg-f5 tab4 clearfix" style="position: absolute; width: 100%;z-index: 1">
       <ul>
         <li v-for="(value, key) in menus" class="fl text-center"
             :class="{on: key == menus.checked }"
         >
-          <a
+          <router-link
             class="f30 color-000" href="javascript:void(0);"
             v-text="value.name"
             @click="menus.checked = key"
-          ></a>
+          ></router-link>
+          <!--:to="{ name: 'bar', params: { state: key }}"-->
         </li>
       </ul>
     </div>
@@ -56,6 +58,10 @@
           没有数据没有数据没有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没有数据没有数据
+
+
+
+
         </div>
       </singleList>
     </div>
@@ -84,6 +90,22 @@
         this.list = [];
         this.startSingleList = true;
       }, 100)
+    },
+    beforeRouteEnter(to, from, next){
+      if (to.params.state) {
+        next(vm => {
+          let pathIsTrue = false;
+          for (let key in vm.menus) {
+            if (vm.menus[key].state == to.params.state) {
+              pathIsTrue = true;
+              vm.menus.checked = key;
+            }
+          }
+          if (!pathIsTrue) {
+            console.log("路径不对")
+          }
+        })
+      }
     },
     methods: {
       updateTop(){
