@@ -7,7 +7,8 @@
             :class="{on: key == menus.checked }"
             @click="menus.checked = key"
         >
-          <router-link :to="{ name: 'StoreGoods', params: { state: value.state }}" v-text="value.name" replace></router-link>
+          <router-link :to="{ name: 'StoreGoods', params: { state: value.state }}" v-text="value.name"
+                       replace></router-link>
         </li>
       </ul>
     </div>
@@ -18,7 +19,6 @@
       <singleList
         :start="startSingleList"
         :dataArr="list"
-        :updateTop="updateTop"
         :updateBottom="updateBottom"
       >
         <ul>
@@ -105,24 +105,17 @@
       next()
     },
     methods: {
-      updateTop(){
-        return new Promise((resolve) => {
-          http.getTop(this.list[0]).then(res => {
-            this.list.unshift(...res);
-            resolve();
-          });
-        })
-      },
       updateBottom(){
         return new Promise((resolve) => {
           let last = this.list[this.list.length - 1] || 0;
-          http.loadMore(last).then((res) => {
+          http.getBuyerStoreOrderList(this.menus.checked, 1, 10).then((res) => {
             res = []
             if (res.length == 0) {
               resolve("加载完毕")
             } else {
               this.list.push(...res);
               resolve();
+
             }
           });
         });
