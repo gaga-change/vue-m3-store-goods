@@ -10,16 +10,18 @@
         <a href="javascript:history.go(-1)"></a>
       </div>
       <h2 class="f36 ">我是买家</h2>
-      <div class="top-right"></div>
+      <!--<div class="top-right">-->
+        <!--<a href="/index.html"><img src="~images/home.png"></a>-->
+      <!--</div>-->
     </div>
     <!---------------------------- tab3 ---------------------------->
     <div class="mt-100 bg-fff clearfix tab3">
       <ul class="clearfix ">
         <li class="fl text-center">
-          <a class="f32 color-000" href="javascript:void(0);">手机端的商品</a>
+          <a class="f32 color-000" href="/member/member-buyer.html">手机端的商品</a>
         </li>
         <li class="fl text-center">
-          <a class="f32 color-000" href="javascript:void(0);">电脑端的商品</a>
+          <a class="f32 color-000" href="/pc/member-buyer-pc.html">电脑端的商品</a>
         </li>
         <li class="fl text-center">
           <a class="f32 color-000 on" href="javascript:void(0);">商城的商品</a>
