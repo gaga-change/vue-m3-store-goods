@@ -50,9 +50,14 @@
           </li>
         </ul>
         <div slot="noDataShow">
-          没有数据没有数据没有数据没有数据没有数据没有数据没
-          有数据没有数据没有数据没有数据没
-          有数据没有数据没有数据没有数据没有数据没有数据
+          <ul>
+            <li>
+              <div class="list-empty bg-fff">
+                <p><img src="~images/gamelogo.png"></p>
+                <span>您还没有订单</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </singleList>
     </div>
@@ -79,7 +84,7 @@
       setTimeout(() => {
         this.list = [];
         this.startSingleList = true;
-      }, 1000)
+      }, 10)
     },
     beforeRouteEnter(to, from, next){
       if (to.params.state) {
