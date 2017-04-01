@@ -1,18 +1,13 @@
 <template>
   <div>
-    {{checked}}
     <!---------------------------- tab4 ---------------------------->
     <div class="mt-20 bg-f5 tab4 clearfix" style="position: absolute; width: 100%;z-index: 1">
       <ul>
-        <li v-for="(value, key) in menus" class="fl text-center"
+        <li v-for="(value, key) in menus.list" class="fl text-center"
             :class="{on: key == menus.checked }"
-        >
-          <router-link
-            class="f30 color-000" href="javascript:void(0);"
-            v-text="value.name"
             @click="menus.checked = key"
-          ></router-link>
-          <!--:to="{ name: 'bar', params: { state: key }}"-->
+        >
+          <router-link :to="{ name: 'StoreGoods', params: { state: value.state }}" v-text="value.name" replace></router-link>
         </li>
       </ul>
     </div>
@@ -58,10 +53,6 @@
           没有数据没有数据没有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没
           有数据没有数据没有数据没有数据没有数据没有数据
-
-
-
-
         </div>
       </singleList>
     </div>
@@ -74,7 +65,6 @@
   import singleList from './PullDownAndInfiniteScrollComponent.vue'
   import {buyerStoreMenu} from './data/buyerStoreMenu.js'
   Vue.component('singleList', singleList);
-  console.log(buyerStoreMenu)
   import http from './http'
   http.getBuyerStoreOrderList("1", 1, 10);
   export  default{
@@ -82,21 +72,22 @@
       return {
         menus: buyerStoreMenu,
         list: null,
-        startSingleList: false // 启动列表显示的指令
+        startSingleList: false, // 启动列表显示的指令
       }
     },
     created(){
       setTimeout(() => {
         this.list = [];
         this.startSingleList = true;
-      }, 100)
+      }, 1000)
     },
     beforeRouteEnter(to, from, next){
       if (to.params.state) {
         next(vm => {
           let pathIsTrue = false;
-          for (let key in vm.menus) {
-            if (vm.menus[key].state == to.params.state) {
+          for (let key in vm.menus.list) {
+            if (vm.menus.list[key].state == to.params.state) {
+              console.log(vm.menus.list[key].state, to.params.state)
               pathIsTrue = true;
               vm.menus.checked = key;
             }
@@ -106,6 +97,7 @@
           }
         })
       }
+      next()
     },
     methods: {
       updateTop(){
@@ -120,6 +112,7 @@
         return new Promise((resolve) => {
           let last = this.list[this.list.length - 1] || 0;
           http.loadMore(last).then((res) => {
+            res = []
             if (res.length == 0) {
               resolve("加载完毕")
             } else {

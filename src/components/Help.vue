@@ -3,7 +3,7 @@
     <h1>辅助页面</h1>
     <ul>
       <li>
-        <router-link :to="{name: 'StoreGoods'}">转入商城中的商品</router-link>
+        <router-link :to="{ name: 'StoreGoods', params: { state: paying }}">转入商城中的商品</router-link>
       </li>
       <li>
         <router-link :to="{name: 'QuickLogin'}">进入登入页面</router-link>

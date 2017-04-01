@@ -29,42 +29,42 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       "/login/api/mobile-category-service": {
-        target: "http://mn.5173.cn/",
+        target: "http://myxb.5173.com:93/",
         changeOrigin: true,
-        pathRewrite: {'^/login/api/mobile-category-service': '/mobile-category-service'}
+        pathRewrite: {'^/login/api/mobile-category-service': '/api/mobile-category-service'}
       },
       "/login/api/mobile-sms-service": {
-        target: "http://mn.5173.cn/",
+        target: "http://myxb.5173.com:93/",
         changeOrigin: true,
         pathRewrite: {'^/login/api': '/api'}
       },
       "/api/mobile-user-service": {
-        target: "http://mn.5173.cn/",
+        target: "http://myxb.5173.com:93/",
         changeOrigin: true,
-        pathRewrite: {'^/api/mobile-user-service': '/mobile-user-service'}
+        // pathRewrite: {'^/api/mobile-user-service': '/mobile-user-service'}
       },
       // http://192.168.40.130:8086/mobile-goods-service/rs
       "/api/mobile-goods-service": {
-        target: "http://192.168.40.130:8086/",
+        target: "http://myxb.5173.com:93/",
         changeOrigin: true,
-        pathRewrite: {'^/api/mobile-goods-service': '/mobile-goods-service'}
+        // pathRewrite: {'^/api/mobile-goods-service': '/mobile-goods-service'}
       },
-      ["**/*.html"]: {
-        target: "http://localhost:3000/",
-        changeOrigin: true,
-      },
-      ["/js"]: {
-        target: "http://localhost:3000/",
-        changeOrigin: true,
-      },
-      ["/css"]: {
-        target: "http://localhost:3000/",
-        changeOrigin: true,
-      },
-      ["/images"]: {
-        target: "http://localhost:3000/",
-        changeOrigin: true,
-      },
+      // ["**/*.html"]: {
+      //   target: "http://localhost:3000/",
+      //   changeOrigin: true,
+      // },
+      // ["/js"]: {
+      //   target: "http://localhost:3000/",
+      //   changeOrigin: true,
+      // },
+      // ["/css"]: {
+      //   target: "http://localhost:3000/",
+      //   changeOrigin: true,
+      // },
+      // ["/images"]: {
+      //   target: "http://localhost:3000/",
+      //   changeOrigin: true,
+      // },
       "/api": {
         target: "http://myxb.5173.com:93/",
         changeOrigin: true,
